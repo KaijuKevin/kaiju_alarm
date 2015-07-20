@@ -1,0 +1,13 @@
+<h1>Current Alarms</h1>
+<% @alarms.each do |alarm| %>
+  <ul>
+    <li>Kaiju: <%= alarm.kaiju %>. Created at <%= alarm.created_at %></li>
+      <li><% if alarm.active %>
+        the alarm is currently active
+      <% else %>
+        the alarm is no longer active
+      <% end %></li>
+  </ul>
+<% end %>
+
+<%= link_to "New Alarm", new_alarm_path %>
