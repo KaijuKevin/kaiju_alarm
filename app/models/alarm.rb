@@ -1,7 +1,4 @@
 class Alarm < ActiveRecord::Base
-  before_create :sound_alarm
-
-  private
 
   def sound_alarm
     begin
